@@ -1,9 +1,15 @@
 
 const http = require('http');
-
+const cors = require('cors');
 const express = require('express');
 const app = express();
+const corsOptions ={
+    origin:'*',
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200,
+}
 app.use(express.json())
+app.use(cors(corsOptions))
 
 // your express configuration here
 
@@ -27,11 +33,14 @@ httpServer.listen(8080);
 
 app.get('/todos', function (req, res) {
     res.header('Content-type', 'text/json');
+
     return res.end(JSON.stringify(todos));
 });
 
 app.post('/todos', function (req, res) {
     res.header('Content-type', 'text/json');
+
+
     todos.push(req.body)
     return res.end(JSON.stringify(todos));
 });
@@ -47,6 +56,8 @@ app.post('/edit-todos', function (req, res) {
     todos[todoPosition].status = updatedStatus;
 
     res.header('Content-type', 'text/json');
+
+
 
     return res.end(JSON.stringify(todos));
 });
