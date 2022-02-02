@@ -2,20 +2,20 @@
 
 ## Requirements
 
-To install this application you require the following :
+To install this application you require the following :  
 
-npm : 8.1.2
-nvm : 0.39.1
-node : v16.13.2
+npm : 8.1.2  
+nvm : 0.39.1  
+node : v16.13.2  
 
 
 Once you have installed npm and nvm, you may use nvm to install Node JS v16 which is a requirement for this project
 
-After installing node, navigate to the root directory of this project and in your terminal run
+After installing node, navigate to the root directory of this project and in your terminal run  
 
 `npm install`
 
-Then to run the application, run:
+Then to run the application, run:  
 
 `node server.js`
 
@@ -24,9 +24,9 @@ Then to run the application, run:
 
 #### GET TODO's
 
-Method: GET
-Path: /todos
-Produces: JSON Array of Todos
+Method: GET  
+Path: /todos  
+Produces: JSON Array of Todos  
 Example:
 ````
 [
@@ -45,9 +45,9 @@ Example:
 
 #### ADD TODO's
 
-Method: POST
-Path: /todos
-Consumes: JSON Object of Todo to add
+Method: POST  
+Path: /todos  
+Consumes: JSON Object of Todo to add  
 Produces: JSON Array of Todos
 
 Example(consumes):
@@ -77,9 +77,9 @@ Example(produces):
 
 #### EDIT TODO's
 
-Method: POST
-Path: /edit-todos
-Consumes: JSON Object of Todo to edit
+Method: POST  
+Path: /edit-todos  
+Consumes: JSON Object of Todo to edit  
 Produces: JSON Array of Todos
 
 Example(consumes):
@@ -109,9 +109,9 @@ Example(produces):
 
 #### DELETE TODO's
 
-Method: POST
-Path: /del-todos
-Consumes: JSON Object of containing id of todo to delete
+Method: POST  
+Path: /del-todos  
+Consumes: JSON Object of containing id of todo to delete  
 Produces: JSON Array of Todos
 
 Example(consumes):
